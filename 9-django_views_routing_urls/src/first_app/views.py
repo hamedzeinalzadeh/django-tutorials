@@ -1,4 +1,4 @@
-from django.http.response import HttpResponse
+from django.http.response import HttpResponse, HttpResponseNotFound, Http404
 from django.shortcuts import render
 
 
@@ -10,7 +10,13 @@ articles = {
 }
 
 def news_view(request, topic):
-    return HttpResponse(articles[topic])
+    try:
+        result = articles[topic]
+        return HttpResponse(result)
+    except:
+        #result = 'No page for that topic!'
+        #return HttpResponseNotFound(result) --> for debugging
+        raise Http404('404 GENERIC ERROR')   #404.html 
 
 def add_view(request, num1, num2):
     #domain.com/first_app/num1/num2
