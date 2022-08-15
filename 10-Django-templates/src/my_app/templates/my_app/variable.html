@@ -6,6 +6,24 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>VARIABLE.HTML</h1>
+    <ul>
+    {% for item in some_list %}
+
+        <!-- <p>{{item}}</p> -->
+        <li>{{item}}</li> 
+
+    {% endfor %}
+    </ul>    
+
+    <ul>
+        {% for k,v in some_dictionary.items %}
+    
+            <!-- <p>{{item}}</p> -->
+            <li>{{v}}</li> 
+    
+        {% endfor %}
+        </ul> 
     <!-- <h1>VARIABLE.HTML</h1>
     <h2>Her first name was {{first_name | upper}} and her last name was {{last_name | lower | capfirst}}</h2>
     <h2>{{some_list.0}}</h2>
