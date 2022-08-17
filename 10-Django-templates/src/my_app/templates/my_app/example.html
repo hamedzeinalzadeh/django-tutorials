@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,10 +13,12 @@
 </body>
 </html> -->
 
-
+{% load static %}
 
 {% block content %}
 <h1>THIS IS INSIDE THE BLOCK IN EXAMPLE.HTML</h1>
+
+<img src="{% static 'my_app/Wallpaper (1).jpg'%}" alt="my image">
 {% endblock content %}
 
 <!-- <html lang="en">
